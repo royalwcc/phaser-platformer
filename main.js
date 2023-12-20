@@ -131,6 +131,8 @@ class MainScene extends Phaser.Scene {
       }
     });
 
+    //console.log(this.enemySpawnPoints);
+
     const marbleTiles = this.map.addTilesetImage("marble", "marble");
     const rockTiles = this.map.addTilesetImage("rock", "rock");
     const sandTiles = this.map.addTilesetImage("sand", "sand");
@@ -259,7 +261,7 @@ class MainScene extends Phaser.Scene {
 
     this.cameras.main.setBounds(0, 0, WIDTH, HEIGHT);
     this.cameras.main.startFollow(this.player);
-    this.cameras.main.zoom = 1.5;
+    this.cameras.main.zoom = 3;
 
     this.enemies = this.physics.add.group();
     this.physics.add.collider(this.enemies, platformLayer);
