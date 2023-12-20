@@ -29,11 +29,11 @@ class UiScene extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image("coin", "coin.png");
+    this.load.image("coin-ui", "coin.png");
   }
 
   create() {
-    let coin = this.add.image(32, 32, "coin");
+    let coin = this.add.image(32, 32, "coin-ui");
     coin.setScale(0.5);
 
     this.scoreText = this.add.text(55, 10, "0", {
